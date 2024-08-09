@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тестовое задание</title>
+
+  <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Medium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaPT-Medium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/FuturaPT-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaPT-Demi.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/FuturaPT-Demi.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaPT-Book.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/FuturaPT-Book.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__logo-wrap">
+        <a class="header__logo" href="#"><img src="img/logo.svg" alt="Логотип"></a>
+        <img class="header__version" src="img/2.01.svg" alt="Версия">
+      </div>
+      <a class="header__login"><img src="img/login.svg" alt="Войти"></a>
+    </div>
+  </header>
+  <main>
+    <section class="section-main section-settings container">
+      <nav class="section-main__nav">
+        <ul class="section-main__list">
+          <li class="section-main__item">
+            <img class="section-main__icon" src="img/nav1.svg" alt="Иконка Имущество">
+            Имущество
+          </li>
+          <li class="section-main__item">
+            <img class="section-main__icon" src="img/nav2.svg" alt="Иконка Инвентаризация">
+            Инвентаризация
+          </li>
+          <li class="section-main__item">
+            <img class="section-main__icon" src="img/nav3.svg" alt="Иконка Сотрудники">
+            Сотрудники
+          </li>
+          <li class="section-main__item">
+            <img class="section-main__icon" src="img/nav4.svg" alt="Иконка Уведомления">
+            Уведомления
+          </li>
+          <li class="section-main__item">
+            <img class="section-main__icon" src="img/nav5.svg" alt="Иконка Локации">
+            Локации
+          </li>
+          <li class="section-main__item section-main__nav-active">
+            <img class="section-main__icon" src="img/nav6.svg" alt="Иконка Настройки">
+            Настройки
+          </li>
+        </ul>
+        <button class="section-main__nav-btn">
+          <span><img class="section-main__nav-icon" src="img/arr-left.svg" alt=""></span>
+          Скрыть меню</button>
+      </nav>
+      <div class="section-main__setting">
+        
+        <ul class="section-main__breadcrumb">
+          <li class="section-main__breadcrumb-item"><a class="section-main__breadcrumb-link" href="#">Настройки</a></li>
+          <li class="section-main__breadcrumb-item"><a class="section-main__breadcrumb-link" href="#">Локации</a></li>
+        </ul>
+        <ul class="section-main__link-wrap">
+          <li class="section-main__nav-item"><a class="section-main__nav-link" href="#">Имущество</a></li>
+          <li class="section-main__nav-item"><a class="section-main__nav-link" href="#">Инвентаризация</a></li>
+          <li class="section-main__nav-item"><a class="section-main__nav-link" href="#">Сотрудники</a></li>
+          <li class="section-main__nav-item"><a class="section-main__nav-link section-main__active-link" href="#">Локации</a></li>
+          <li class="section-main__nav-item"><a class="section-main__nav-link" href="#">Уведомления</a></li>
+          <li class="section-main__nav-item"><a class="section-main__nav-link" href="#">Справочники</a></li>
+          <li class="section-main__nav-item"><a class="section-main__nav-link" href="#">Пользователь</a></li>
+        </ul>
+        <h2 class="section-main__heading">Настройка полей таблицы</h2>
+        <table class="section-main__table">
+          <thead>
+            <tr>
+              <td></td>
+              <td>Описание</td>
+              <td>Сортировка</td>
+              <td>ID</td>
+              <td>Тип поля</td>
+              <td>Выводить в таблицу</td>
+              <td>Обязательно</td>
+              <td>Удалить</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table__tr-white">
+              <td class="table__first-td">
+                <button class="section-main__dott-btn"></button>
+                <span>Название</span>
+                <button class="section-main__edit-btn"></button>
+              </td>
+              <td>
+                <img src="img/help-circle.svg" alt="">
+              </td>
+              <td>
+                <span class="table__sort">500</span>
+              </td>
+              <td>1001</td>
+              <td>Строка</td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="table__first-td">
+                <button class="section-main__dott-btn"></button>
+                <span>Цена</span>
+                <button class="section-main__edit-btn"></button>
+              </td>
+              <td></td>
+              <td>
+                <span class="table__sort">510</span>
+              </td>
+              <td>1002</td>
+              <td>Число</td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td><input class="section-main__check" type="checkbox" checked></td>
+            </tr>
+            <tr class="table__tr-white">
+              <td class="table__first-td">
+                <button class="section-main__dott-btn"></button>
+                <span>МОЛ</span>
+                <button class="section-main__edit-btn"></button>
+              </td>
+              <td></td>
+              <td>
+                <span class="table__sort">520</span>
+              </td>
+              <td>1003</td>
+              <td class="table__dir-wrap">Справочник
+                <span class="table__dir"></span>
+              </td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td><input class="section-main__check" type="checkbox"></td>
+            </tr>
+            <tr>
+              <td class="table__first-td">
+                <button class="section-main__dott-btn"></button>
+                <span>Фото</span>
+                <button class="section-main__edit-btn"></button>
+              </td>
+              <td></td>
+              <td>
+                <span class="table__sort">530</span>
+              </td>
+              <td>1004</td>
+              <td>Файл</td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td><input class="section-main__check" type="checkbox"></td>
+            </tr>
+            <tr class="table__tr-white">
+              <td class="table__first-td">
+                <button class="section-main__dott-btn"></button>
+                <span>Цвет</span>
+                <button class="section-main__edit-btn"></button>
+              </td>
+              <td></td>
+              <td>
+                <span class="table__sort">540</span>
+              </td>
+              <td>1005</td>
+              <td>Строка</td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td><input class="section-main__check" type=""></td>
+            </tr>
+            <tr>
+              <td class="table__first-td">
+                <button class="section-main__dott-btn"></button>
+                <span>Локация</span>
+                <button class="section-main__edit-btn"></button>
+              </td>
+              <td></td>
+              <td>
+                <span class="table__sort">550</span>
+              </td>
+              <td>1006</td>
+              <td class="table__dir-wrap">Справочник
+                <span class="table__dir"></span>
+              </td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td><input class="section-main__check" type="checkbox"></td>
+            </tr>
+            <tr class="table__tr-white">
+              <td class="table__first-td">
+                <button class="section-main__dott-btn"></button>
+                <span>Количество</span>
+                <button class="section-main__edit-btn"></button>
+              </td>
+              <td></td>
+              <td>
+                <span class="table__sort">560</span>
+              </td>
+              <td>1007</td>
+              <td>Число</td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td><input class="section-main__check" type=""></td>
+            </tr>
+            <tr>
+              <td class="table__first-td">
+                <button class="section-main__dott-btn"></button>
+                <span>Описание</span>
+                <button class="section-main__edit-btn"></button>
+              </td>
+              <td></td>
+              <td>
+                <span class="table__sort">570</span>
+              </td>
+              <td>1008</td>
+              <td>Текст</td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td><input class="section-main__check" type=""></td>
+            </tr>
+            <tr class="table__tr-white">
+              <td class="table__first-td">
+                <button class="section-main__dott-btn"></button>
+                <span>Количество</span>
+                <button class="section-main__edit-btn"></button>
+              </td>
+              <td></td>
+              <td>
+                <span class="table__sort">560</span>
+              </td>
+              <td>1007</td>
+              <td>Число</td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td>
+                <input class="section-main__check" type="checkbox" checked>
+              </td>
+              <td><input class="section-main__check" type=""></td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="section-main__create-btn">
+          <span class="section-main__plus-btn"></span>
+          Добавить поле
+        </button> 
+      </div>
+    </section>
+  </main>
+  <footer class="footer container">
+    <div class="footer-content">
+      <div class="footer__btn-wrap">
+        <button class="footer__btn-save">Сохранить</button>
+        <button class="footer__btn-cancel">Отменить</button>
+      </div>
+      <a class="footer__link" href="#" target="_blank">Документация</a>
+    </div>
+  </footer> 
+  <script src="js/script.js"></script>
+</body>
+</html>

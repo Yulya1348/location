@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тестовое задание</title>
+
+  <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Medium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaPT-Medium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/FuturaPT-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaPT-Demi.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/FuturaPT-Demi.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/FuturaPT-Book.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/FuturaPT-Book.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="scroll">
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__logo-wrap">
+        <a class="header__logo" href="#"><img src="img/logo.svg" alt="Логотип"></a>
+        <img class="header__version" src="img/2.01.svg" alt="Версия">
+      </div>
+      <a class="header__login"><img src="img/login.svg" alt="Войти"></a>
+    </div>
+  </header>
+  <main>
+    <section class="section-main container">
+      <nav class="section-main__nav">
+        <ul class="section-main__list">
+          <li class="section-main__item">
+            <img class="section-main__icon" src="img/nav1.svg" alt="Иконка Имущество">
+            Имущество
+          </li>
+          <li class="section-main__item">
+            <img class="section-main__icon" src="img/nav2.svg" alt="Иконка Инвентаризация">
+            Инвентаризация
+          </li>
+          <li class="section-main__item">
+            <img class="section-main__icon" src="img/nav3.svg" alt="Иконка Сотрудники">
+            Сотрудники
+          </li>
+          <li class="section-main__item">
+            <img class="section-main__icon" src="img/nav4.svg" alt="Иконка Уведомления">
+            Уведомления
+          </li>
+          <li class="section-main__item section-main__nav-active">
+            <img class="section-main__icon" src="img/nav5.svg" alt="Иконка Локации">
+            Локации
+          </li>
+          <li class="section-main__item">
+            <img class="section-main__icon" src="img/nav6.svg" alt="Иконка Настройки">
+            Настройки
+          </li>
+        </ul>
+        <button class="section-main__nav-btn">
+          <span><img class="section-main__nav-icon" src="img/arr-left.svg" alt=""></span>
+          Скрыть меню</button>
+      </nav>
+      <div class="section-main__content">
+        <div class="section-main__location">
+          <ul class="section-main__breadcrumb">
+            <li class="section-main__breadcrumb-item"><a class="section-main__breadcrumb-link" href="#">Локации</a></li>
+            <li class="section-main__breadcrumb-item"><a class="section-main__breadcrumb-link" href="#">Все локации</a></li>
+          </ul>
+          <ul class="section-main__link-wrap">
+            <li class="section-main__nav-item"><a class="section-main__nav-link section-main__active-link" href="#">Все локации</a></li>
+            <li class="section-main__nav-item"><a class="section-main__nav-link" href="#">Импорт/Экспорт</a></li>
+            <li class="section-main__nav-item"><a class="section-main__nav-link" href="#">Настройки</a></li>
+          </ul>
+          <button class="section-main__create-btn" id="modal__btn-create">
+            <span class="section-main__plus-btn"></span>
+            Создать локацию
+          </button>
+          <div class="modal" id="modal-create">
+            <div class="modal-content">
+              <h3 class="modal-heading">Создать локацию</h3>
+              <form action="#">
+                <input class="modal-input" type="text" placeholder="Название">
+                <input class="modal-input" type="text" placeholder="Штрихкод">
+                <input class="modal-input" type="text" placeholder="RFID">
+                <div class="custom-select-wrapper">
+                  <select class="custom-select">
+                    <option value="0">Вложенность</option>
+                    <option value="1">Локация 1</option>
+                    <option value="2">Подотдел 1</option>
+                    <option value="3">Подподотдел 1</option>
+                  </select>
+                </div>
+                <div class="toggle-wrap">
+                  <span class="toggle-text">Виртуальная локация</span>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-wrap">
+                  <span class="toggle-text">Локация для утерь</span>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="modal-btn-wrap">
+                  <button class="btn-create footer__btn-save">Создать</button>
+                  <button class="btn-cancel footer__btn-cancel">Отменить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal" id="modal-change">
+            <div class="modal-content">
+              <h3 class="modal-heading">Изменить локацию %название%</h3>
+              <form action="#">
+                <label class="modal-label" for="name">Название</label>
+                <input class="modal-input" type="text" placeholder="Название" id="name">
+                <label class="modal-label" for="code">Штрихкод</label>
+                <input class="modal-input" type="text" placeholder="Штрихкод" id="code">
+                <label class="modal-label" for="RFID">RFID</label>
+                <input class="modal-input" type="text" placeholder="RFID" id="RFID">
+                <div class="custom-select-wrapper">
+                  <span>Вложенность</span>
+                  <select class="custom-select">
+                    <option value="0">Локация 1</option>
+                    <option value="1">Подотдел 1</option>
+                    <option value="2">Подподотдел 1</option>
+                  </select>
+                </div>
+                <div class="toggle-wrap">
+                  <span class="toggle-text">Виртуальная локация</span>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="toggle-wrap">
+                  <span class="toggle-text">Локация для утерь</span>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="modal-btn-wrap">
+                  <button class="btn-del footer__btn-cancel">Удалить</button>
+                  <button class="btn-cancel footer__btn-cancel" id="btn-cancel">Отменить</button>
+                </div>
+                <button class="footer__btn-save btn-save" id="btn-save">Сохранить</button>
+              </form>
+            </div>
+          </div>
+          <ul class="section-main__location-list">
+            <li class="section-main__location-item">
+              <span class="section-main__location-minus"></span>
+              <span class="section-main__location-text">Локация 1</span>
+              <span class="section-main__location-count">512</span>
+              <button class="section-main__location-edit modal-btn">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.61073 2.55667L9.44333 5.38994L2.8326 12H0V9.16673L6.61073 2.55601V2.55667ZM7.55493 1.61247L8.97123 0.195508C9.09645 0.0703245 9.26626 0 9.44333 0C9.62039 0 9.7902 0.0703245 9.91543 0.195508L11.8045 2.08457C11.9297 2.2098 12 2.37961 12 2.55667C12 2.73374 11.9297 2.90355 11.8045 3.02877L10.3875 4.44507L7.55493 1.61247Z" fill="#FF6600"/>
+                </svg>
+                Редактировать</button>
+              <button class="section-main__location-del modal-btn">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.33333 5L8.33333 0L10 1.66667L5 6.66667L3.33333 5Z" fill="#FF6600"/>
+                  <path d="M5 6.66667L0 1.66667L1.66667 1.98682e-07L6.66667 5L5 6.66667Z" fill="#FF6600"/>
+                  <path d="M3.33333 5L8.33333 10L10 8.33333L5 3.33333L3.33333 5Z" fill="#FF6600"/>
+                  <path d="M5 3.33333L0 8.33333L1.66667 10L6.66667 5L5 3.33333Z" fill="#FF6600"/>
+                </svg>
+                Удалить</button>
+            </li>
+            <li class="section-main__location-item">
+              <ul class="section-main__secondary-list">
+                <li class="section-main__secondary-item">
+                  <span class="section-main__location-plus"></span>
+                  <span class="section-main__secondary-text section-main__location-text">Подотдел 1</span>
+                  <span class="section-main__location-count">10</span>
+                  <span class="section-main__secondary-descr">Для утерь</span>
+                </li>
+                <li class="section-main__secondary-item">
+                  <span class="section-main__location-minus"></span>
+                  <span class="section-main__secondary-text section-main__location-text">Подотдел 2</span>
+                  <span class="section-main__location-count">100</span>
+                </li>
+                <li class="section-main__secondary-item">
+                  <ul class="section-main__sub-list">
+                    <li class="section-main__sub-item">
+                      <span class="section-main__sub-dott"></span>
+                      <span class="section-main__sub-text">Подподотдел 1</span>
+                      <span class="section-main__location-count">2</span>
+                      <span class="section-main__secondary-descr">Виртуальная</span>
+                      <span class="section-main__sub-descr">Без штрихкода</span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="section-main__secondary-item">
+                  <span class="section-main__location-plus"></span>
+                  <span class="section-main__secondary-text section-main__location-text">Подотдел 3</span>
+                  <span class="section-main__location-count">400</span>
+                </li>
+              </ul>
+            </li>
+            <li class="section-main__location-item">
+              <span class="section-main__location-plus"></span>
+              <span class="section-main__location-text">Локация 2</span>
+              <span class="section-main__location-count">100</span>
+            </li>
+            <li class="section-main__location-item">
+              <span class="section-main__location-plus"></span>
+              <span class="section-main__location-text">Локация 3</span>
+              <span class="section-main__location-count">100</span>
+            </li>
+          </ul>
+        </div>
+        <form class="section-main__form" action="#">
+          <button class="section-main__form-btn" type="submit">синхронизация&nbsp;<span class="section-main__text-btn">(17.05.2024 15:23:21)</span></button>
+          <div class="section-main__input-wrap">
+            <input class="section-main__check" type="checkbox" name="search" id="search" checked>
+            <span class="section-main__form-label">Поиск по точному вхождению</span>
+            <input class="section-main__form-input" type="text" placeholder="Поиск">
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer container">
+    <div class="footer-container">
+      <div class="footer__text-wrap">
+        <span class="footer__text">Последний приём 20.09.2021 18:36:21</span>
+        <span class="footer__text">Последняя передача  20.09.2021 18:38:21</span>
+      </div>
+      <a class="footer__link" href="#" target="_blank">Документация</a>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
